@@ -2,8 +2,16 @@ using Godot;
 
 public partial class World : Node3D
 {
-	public override void _Ready()
+	private double _elapsedTime = 0;
+
+	public override void _Process(double delta)
 	{
-		GD.Print("World Loaded");
+		_elapsedTime += delta;
+
+		if (_elapsedTime >= 1)
+		{
+			GD.Print("1 saniye geçti");
+			_elapsedTime = 0;
+		}
 	}
 }
