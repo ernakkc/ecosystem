@@ -6,9 +6,4 @@ public partial class World : Node3D
 	{
 		GD.Print("World Loaded");
 	}
-
-	public override void _Process(double delta)
-	{
-
-	}
 }
